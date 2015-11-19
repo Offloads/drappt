@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    
+    <title>Dr.Appt</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+  <style id="style-1-cropbar-clipper">
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+ 
+  </head>
+
+  <body data-pinterest-extension-installed="cr1.39.1">
+
+    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Dr.Appt</a>
+        </div>
+        <center>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Home</a>
+                    </li>
+                    <li><a href="#">About</a>
+                    </li>
+                    <li><a href="#">Contact</a>
+                    </li>-->
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Doctors <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Dr. Smith</a>
+                            </li>
+                            <li><a href="#">Dr. Angelo</a>
+                            </li>
+                            <li><a href="#">Dr. McFly</a>
+                            </li>
+        
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign In</button>
+                </form>
+            </div>
+        </center>
+    </div>
+</div>
+
+      <div class="jumbotron">
+        <h2>Doctors Appointment Service</h2>
+        <!--<p class="lead">Please choose a date in the calendar</p>-->
+        <br>
+        <h4>With an account, you can view and update appointments</h4>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up</a></p>
+      <!--</div>-->
+
+      <div class="row marketing">
+        <div class="col-lg-12">
+          
+          
+            
+            <FORM action="" id='new-appointment'>
+                <p>To make an Appointment, please input details:</p>
+                <input type="text" placeholder="First Name" id="patientfirstname"><br>
+                <input type="text" placeholder="Last Name" id="patientlastname"><br>
+                <input type="text" placeholder="email Adress" id="patientemail"><br>
+                <p>Select an available date</p>
+                <input type="text" placeholder="click to add date" id="datepicker"></p>
+                <button id='submit-button' class='btn btn-primary'>Submit</button>
+            </FORM>
+
+
+        </div> <!-- /container -->
+          </div>
+          <footer class="footer">
+            <p>© Dr.Appt 2015</p>
+          </footer>
+    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+    </body>
+</html>

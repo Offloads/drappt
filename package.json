@@ -1,0 +1,15 @@
+{
+  "name": "drappt",
+  "version": "1.0.0",
+  "description": "dr appointment app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nik",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
+}
