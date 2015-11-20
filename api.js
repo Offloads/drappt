@@ -10,22 +10,26 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 var patientName;
 var apptDate;
+var apptTime;
+var patientEmail;
 var PatientAppt = function(){
     this.appts = [];
     this.id = 1;
     };
+
 //I want to add patient booking items in...?
-PatientAppt.prototype.addAppt = function(patientName, apptDate){
-    var  apptObject = { name: patientName, date: apptDate, id: this.id };
+PatientAppt.prototype.addAppt = function(patientName, patientEmail, apptDate, apptTime){
+    var  apptObject = { name: patientName, email: patientEmail, date: apptDate, time: apptTime, id: this.id };
     this.appts.push(apptObject);
     this.id += 1;
 }
-    apptDate = "17/11/15";
 
+    apptDate = "17/11/15";
+    apptTime = "8:00 AM"
 var patientAppt = new PatientAppt();
-    patientAppt.addAppt("Nik O'Donnell", apptDate);
-    patientAppt.addAppt("Victor", apptDate);
-    
+    //patientAppt.addAppt("Nik O'Donnell", apptDate, apptTime);
+    //patientAppt.addAppt("Victor", apptDate);
+  
 
     //console.log(patientAppt.appts);
 
@@ -34,6 +38,7 @@ var patientAppt = new PatientAppt();
 //}
     
 //GET
+
 app.get('/appts', function(req, res){//creating GET request from url /appts - adding request/response
     res.json(patientAppt.appts);//response
     
@@ -99,15 +104,16 @@ app.post('/appts', function(req, res){//create POST method
     }
     patientName = req.body.name;
     patientEmail = req.body.email;
-    getDate = req.body.date;
-    var appt = patientAppt.addAppt(patientName, patientEmail, getDate);
+    apptDate = req.body.date;
+    apptTime = req.body.time;
+    var appt = patientAppt.addAppt(patientName, patientEmail, apptDate, apptTime);
     
     res.json(appt);
         
 });
 
 ///POST=worked..kinda - 
-
+//name: patientName, date: apptDate, time: apptTime, id: this.id
 //DELETE - need to complete
 app.delete('/appts/:id', function (req, res){
 
